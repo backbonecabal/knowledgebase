@@ -1,0 +1,20 @@
+{
+	"name": "backbone-cabal-kb",
+	"version": "1.0.0",
+	"description": "Backbone Cabal Knowledgebase",
+	"main": "index.js",
+	"scripts": {
+		"lint": "npx prettier --write ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/backbonecabal/knowledgebase.git"
+	},
+	"keywords": [],
+	"author": "SEE CONTRIBUTORS",
+	"license": "SEE LICENSE IN LICENSE",
+	"bugs": {
+		"url": "https://github.com/backbonecabal/knowledgebase/issues"
+	},
+	"homepage": "https://github.com/backbonecabal/knowledgebase#readme"
+}
