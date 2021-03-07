@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# Sushiswap Cabal
+# Sushiswap Proposal
 
 > MEV Strategy for enabling reduced transaction costs and capturing platform arbitrage
 
