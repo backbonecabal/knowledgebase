@@ -4,6 +4,9 @@ description: Documentation and Information for Backbone Cabal
 
 repository: backbonecabal/knowledgebase
 
+permalink: /:title/
+
+
 ## local method ##
 # theme: jekyll-rtd-theme
 # debug:
