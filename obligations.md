@@ -113,7 +113,7 @@ Participant’s Member Property Accounts, and any other of such Clearing Partici
 by, pledged to or otherwise available to Commodity Stream, LLC, may be applied by Commodity Stream,
 LLC to discharge the Obligations of such Clearing Participant to Commodity Stream, LLC (including
 any costs and expenses associated with the liquidation, transfer or management of Contracts held in
-or for the Member Property Accounts of such Clearing Participant, and any fees, assessments  or
+or for the Member Property Accounts of such Clearing Participant, and any fees, assessments or
 fines imposed by Commodity Stream, LLC on such Clearing Participant), and Commodity Stream, LLC may
 cause all Contracts of such Clearing Participant (whether or not carried in a Customer Account) to
 be closed or offset, transferred to any other Clearing Participant, or otherwise resolved as

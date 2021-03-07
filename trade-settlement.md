@@ -191,5 +191,4 @@ Network and Clearing Participants shall make such reports in respect of trades,
 Smart Contracts, Normal Contracts settlements and deliveries as may be as
 prescribed by Commodity Stream, LLC.
 
-
 copyright (c) 2021 Commodity Stream, LLC - All Rights Reserved CC-BY-NC-ND-2.5
