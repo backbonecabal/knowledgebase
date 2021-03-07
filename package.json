@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Backbone Cabal Knowledgebase",
   "main": "index.js",
-  "files": ["docs"],
+  "files": [
+    "docs"
+  ],
   "scripts": {
     "lint": "npx prettier --write ."
   },
