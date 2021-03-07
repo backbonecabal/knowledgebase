@@ -6,7 +6,6 @@ sort: 1
 
 > MEV Strategy for enabling reduced transaction costs and capturing platform arbitrage
 
-
 This is a strategy that realizes profit by smart transaction batching
 for the purposes of arbitrage by controlling transaction ordering.
 

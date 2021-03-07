@@ -2,7 +2,6 @@
 
 Knowledgebase for Backbone Cabal
 
-
 ## Overview
 
 This is a strategy that realizes profit by smart transaction batching for the purposes of arbitrage by controlling transaction ordering.
@@ -12,7 +11,6 @@ Right now every user sends a transaction directly to the network mempool and thu
 YCabal creates a virtualized mempool (i.e. a MEV-relay network) that aggregates transactions (batching), such transactions include:
 
 Users can opt in and send transactions to YCabal and in return for not having to pay for gas for their transaction we batch process it and take the arbitrage profit from it. Risk by inventory price risk is carried by a Vault, where Vault depositers are returned the profit the YCabal realizes.
-
 
 ## Knowledgebase Site Index
 
