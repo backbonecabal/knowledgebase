@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/backbonecabal/knowledgebase/issues"
   },
-  "homepage": "https://github.com/backbonecabal/knowledgebase#readme"
+  "homepage": "https://github.com/backbonecabal/knowledgebase#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "lighthouse": "^7.2.0"
+  }
 }

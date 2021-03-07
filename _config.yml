@@ -4,6 +4,9 @@ description: Documentation and Information for Backbone Cabal
 
 repository: backbonecabal/knowledgebase
 
+author:
+  twitter: foldfinance
+
 ## local method ##
 # theme: jekyll-rtd-theme
 # debug:
@@ -16,6 +19,15 @@ remote_theme: rundocs/jekyll-rtd-theme
 
 readme_index:
   with_frontmatter: true
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
 
 exclude:
   - Gemfile
@@ -37,3 +49,4 @@ plugins:
   - jekyll-avatar
   - jekyll-mentions
   - jekyll-sitemap
+  - jekyll-feed
