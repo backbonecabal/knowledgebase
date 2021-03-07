@@ -1,13 +1,13 @@
 {
   "name": "backbone-cabal-kb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Backbone Cabal Knowledgebase",
   "main": "index.js",
   "files": [
     "docs"
   ],
   "scripts": {
-  "report": "lighthouse http://127.0.0.1:4000",
+    "report": "lighthouse http://127.0.0.1:4000",
     "lint": "npx prettier --write ."
   },
   "repository": {
@@ -25,6 +25,7 @@
     "doc": "docs"
   },
   "devDependencies": {
-    "lighthouse": "^7.2.0"
+    "lighthouse": "^7.2.0",
+    "semantic-release": "^17.4.1"
   }
 }
