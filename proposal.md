@@ -19,8 +19,6 @@ aggregates transactions (batching), such transactions include:
 
 DEX trades <br> Interactions with protocols <br> Auctions <br> etc <br>
 
-#### TL;DR - Users can opt in and send transactions to YCabal and in return for not having to pay for gas for their transaction we batch process it and take the arbitrage profit from it. Risk by inventory price risk is carried by a Vault, where Vault depositers are returned the profit the YCabal realizes
-
 ## Efficiency by Aggregation
 
 By leveraging batching, miner transaction flow, and providing additional
