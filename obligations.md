@@ -106,7 +106,7 @@ ADDITION TO OTHER RIGHTS THAT Commodity Stream, LLC CLEARING MAY HAVE UNDER
 APPLICABLE LAW AND GOVERNMENTAL REGULATIONS, OTHER PROVISIONS OF THE RULES,
 ADDITIONAL AGREEMENTS WITH THE CLEARING PARTICIPANT OR ANY OTHER SOURCE.
 
-## 502\. Clearing Participant Default.
+## 502\. Clearing Participant Default
 
 (A). If a Clearing Participant is in Default, Margin held with respect to such Clearing
 Participant’s Member Property Accounts, and any other of such Clearing Participant’s assets held

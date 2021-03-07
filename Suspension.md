@@ -113,7 +113,7 @@ purpose of implementing the proviso to the preceding sentence shall be binding
 on the Clearing Participant and any persons claiming through the Clearing
 Participant and their respective successors and assigns.
 
-## 602\. Right of Appeal.
+## 602\. Right of Appeal
 
 A Clearing Participant suspended pursuant to Rule 601 shall be entitled, upon
 request within five Business Days after the date of its suspension, to a written
@@ -157,7 +157,7 @@ not be affected by such reversal or modification.
 may, in the discretion of the body holding the hearing, be charged in whole or in part to the
 suspended Clearing Participant in the event that the suspension is finally affirmed.
 
-## 603\. Sanctions from Disciplinary Proceedings.
+## 603\. Sanctions from Disciplinary Proceedings
 
     (A). Commodity Stream, LLC may censure, suspend, expel or limit the activities, functions or
 
@@ -172,7 +172,7 @@ facilities, where applicable, for its transactions with Commodity Stream, LLC.
     (B). Commodity Stream, LLC shall provide prompt notice to the CFTC/and or any other governance Board
      of any action taken in accordance with this Rule 603.
 
-## 604\. Procedures for Disciplinary Proceedings.
+## 604\. Procedures for Disciplinary Proceedings
 
     (A). Before any sanction is imposed pursuant to Rule 603, Commodity Stream, LLC shall furnish
 
@@ -251,7 +251,7 @@ Disciplinary Panel, when the Respondent is notified of the decision of the Board
 to be a “sanction” within the meaning of this Rule, and the provisions of this Rule shall be
 inapplicable to any such summary suspension.
 
-## 605\. Discipline by Other Self-Regulatory Organizations.
+## 605\. Discipline by Other Self-Regulatory Organizations
 
     (A). At the discretion of the Clearinghouse, any suspected violation of these Rules may be
 

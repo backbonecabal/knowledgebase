@@ -4,7 +4,7 @@ sort: 6
 
 # Trade and Settlement
 
-## 401. Submission of Trades.
+## 401. Submission of Trades
 
 (A). Upon matching of a trade effected on or pursuant to the rules of the
 Exchange, the Exchange shall promptly submit to Commodity Stream, LLC a trade
@@ -25,7 +25,7 @@ for clearing by Commodity Stream, LLC, Commodity Stream, LLC may reject such
 trade and notify the Exchange of such rejection, setting forth the basis of such
 objection.
 
-## 402\. Clearance and Substitution.
+## 402\. Clearance and Substitution
 
 (a) The submission of a Contract (Smart Contract or a Normal Contract) to
 Commodity Stream, LLC by or on behalf of the buying and selling Clearing
@@ -127,7 +127,7 @@ interest on such deposits shall belong to Commodity Stream, LLC and may be
 withdrawn from the account holding the Margin and deposited with the general
 funds of Commodity Stream, LLC.
 
-## 404\. Offset and Settlement.
+## 404\. Offset and Settlement
 
 (a) Where, as the result of novation under Rule 402, a Clearing Participant has
 bought and sold a Contract on or subject to the Rules of the Exchange with the
@@ -146,13 +146,13 @@ the Network and/or Clearing Participant’s Customer Account shall not be offset
 under this Rule 405 against Contracts designated by the Clearing Participant as
 for the Clearing Participant’s own Member Property Account.
 
-## 405\. Approved Depository Institutions.
+## 405\. Approved Depository Institutions
 
 A bank, trust company or other depository that meets such financial and other
 requirements of Commodity Stream, LLC may be designated by Commodity Stream, LLC
 as an Approved Depository Institution.
 
-## 406\. Statement of Trades and Contracts.
+## 406\. Statement of Trades and Contracts
 
 Commodity Stream, LLC shall in the manner and at the time that it determines
 from time to time make available to a Clearing Participant an accounting of
@@ -161,7 +161,7 @@ has trades to be cleared or Contracts open with Commodity Stream, LLC. Any
 amounts the Clearing Participant has posted to Commodity Stream, LLC under Rule
 403 shall be indicated on this statement
 
-## 409\. Settlement Prices.
+## 409\. Settlement Prices
 
 As used in the Rules, the term “Settlement Price” means the settlement price for
 a Contract for which positions remain open, as determined, intra-day and at the
@@ -185,7 +185,7 @@ collateralization having been transferred to the Clearinghouse’s custody at th
 inception of the trade. Deliveries will occur on the Clearinghouse’s books and
 records unless otherwise specified in the Exchange contract specifications.
 
-## 411\. Reporting.
+## 411\. Reporting
 
 Network and Clearing Participants shall make such reports in respect of trades,
 Smart Contracts, Normal Contracts settlements and deliveries as may be as

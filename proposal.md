@@ -96,15 +96,15 @@ Proposed end-user transaction example for interacting with the YCabal
 
 ```jsx
 order = {
-	Give: ETH,
-	Want: DAI,
-	SlippageLimit: 10%,
-	Amount: 1000ETH,
-	Cabal: 0xabc...,
-	FeesIn: DAI,
-	TargetDEX: SushiSwap,
-	Deadline: time.Now() + 1*time.Minute
-	Signature: sign(order.SignBytes())
+ Give: ETH,
+ Want: DAI,
+ SlippageLimit: 10%,
+ Amount: 1000ETH,
+ Cabal: 0xabc...,
+ FeesIn: DAI,
+ TargetDEX: SushiSwap,
+ Deadline: time.Now() + 1*time.Minute
+ Signature: sign(order.SignBytes())
 }
 ```
 
@@ -116,30 +116,30 @@ transaction contains 2 orders:
 
 ```jsx
 transactions = [
-	{
-		Give: ETH,
-		Want: DAI,
-		SlippageLimit: 10%,
-		Amount: 1000ETH,
-		Cabal: 0xabc...,
-		FeesIn: DAI,
-		TargetDEX: SushiSwap,
-		Deadline: time.Now() + 1*time.Minute
-		Signature: sign(order.SignBytes())
-	},
-	{
-		Give: DAI,
-		Want: ETH,
-		SlippageLimit: 1%,
-		Amount: 10ETH,
-		Cabal: 0xabc...,
-		FeesIn: DAI,
-		TargetDEX: SushiSwap,
-		Deadline: time.Now() + 1*time.Minute
-		Signature: sign(order.SignBytes()),
-		IsBackbone Cabal: true,
-		TransferProfitTo: transactions[0].signer
-	}
+ {
+  Give: ETH,
+  Want: DAI,
+  SlippageLimit: 10%,
+  Amount: 1000ETH,
+  Cabal: 0xabc...,
+  FeesIn: DAI,
+  TargetDEX: SushiSwap,
+  Deadline: time.Now() + 1*time.Minute
+  Signature: sign(order.SignBytes())
+ },
+ {
+  Give: DAI,
+  Want: ETH,
+  SlippageLimit: 1%,
+  Amount: 10ETH,
+  Cabal: 0xabc...,
+  FeesIn: DAI,
+  TargetDEX: SushiSwap,
+  Deadline: time.Now() + 1*time.Minute
+  Signature: sign(order.SignBytes()),
+  IsBackbone Cabal: true,
+  TransferProfitTo: transactions[0].signer
+ }
 ]
 ```
 
@@ -195,7 +195,7 @@ $$
 R M G=E\left[\lim _{T \rightarrow \infty} \frac{\sum_{\tau=t}^{t+T-1} r_{\tau+1}^{(a)}}{\sum_{\tau=t}^{t+T-1} r_{\tau+1}^{(a)}+\sum_{\tau=t}^{t+T-1} r_{\tau+1}^{(h)}}\right]
 $$
 
-#### Tuple of rewards issued in block interval.
+#### Tuple of rewards issued in block interval
 
 $$
 \left(r_{t}^{(a)}, r_{t}^{(h)}\right)
