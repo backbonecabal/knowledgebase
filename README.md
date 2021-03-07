@@ -1,4 +1,4 @@
-# Backbone Knowledge Base 
+# Backbone Knowledge Base
 
 Knowledgebase for Backbone Cabal
 
@@ -13,8 +13,6 @@ Knowledgebase for Backbone Cabal
 {% endfor %}
 
 <!-- prettier-ignore-end -->
-
-
 
 ## License
 

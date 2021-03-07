@@ -6,7 +6,6 @@ repository: backbonecabal/knowledgebase
 
 permalink: /:title/
 
-
 ## local method ##
 # theme: jekyll-rtd-theme
 # debug:
