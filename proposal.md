@@ -2,18 +2,10 @@
 sort: 1
 ---
 
-> Monopolizing transaction flow for arbitrage batching with miner
-> support
+# Sushiswap Cabal
 
-## Overview
+> MEV Strategy for enabling reduced transaction costs and capturing platform arbitrage
 
-<pre>
-Proposal: YCabal
-Project: SushiSwap / DEX's
-Status: Active
-Version: Draft 0.3.0
-Timeframe: 60d
-</pre>
 
 This is a strategy that realizes profit by smart transaction batching
 for the purposes of arbitrage by controlling transaction ordering.
