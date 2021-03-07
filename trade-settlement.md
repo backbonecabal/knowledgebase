@@ -193,17 +193,5 @@ Network and Clearing Participants shall make such reports in respect of trades,
 Smart Contracts, Normal Contracts settlements and deliveries as may be as
 prescribed by Commodity Stream, LLC.
 
-# 412\. Recieved
-
-Subject to the rates, classifications and rules that have been established by
-the Carrier and are available on request to the Shipper (Shipper defined in 49
-U.S.C.A. § 13102(13)(c)), and to all applicable state and federal regulations.
-Shipper 1) warrants it has read all applicable contract(s) or Carrier’s
-applicable tariff(s) and the limitation of liability provisions set forth
-therein; and 2) has actual knowledge of and accepts the applicable contract or
-tariff terms, including the limits on carrier liability. Carriers’ tariff(s),
-including OD Rules 100, take precedence in the event of any terms or conditions
-conflicts.
-
 copyright (c) 2019 Commodity Stream, LLC & Clearing Corporation. All Rights
 Reserved CC-BY-NC-ND-2.5
