@@ -61,7 +61,7 @@ CONTRACTUAL TERMS ARISING FROM TRANSACTION USAGE, COURSE OF DEALING OR COURSE OF
 PERFORMANCE) RELATING TO ANY SYSTEMS OR SERVICES OF THE CLEARINGHOUSE OR
 SERVICES, EQUIPMENT OR FACILITIES USED TO SUPPORT SUCH SYSTEMS OR SERVICES.
 
-©. Commodity Stream, LLC CLEARING MAY ACCEPT AND RELY UPON ANY INFORMATION OR
+(C). Commodity Stream, LLC CLEARING MAY ACCEPT AND RELY UPON ANY INFORMATION OR
 INSTRUCTION GIVEN TO Commodity Stream, LLC CLEARING BY A CLEARING PARTICIPANT OR
 ITS OFFICERS OR AUTHORIZED REPRESENTATIVES, WHICH REASONABLY IS UNDERSTOOD BY
 Commodity Stream, LLC CLEARING TO HAVE BEEN DELIVERED TO Commodity Stream, LLC
@@ -106,26 +106,72 @@ ADDITION TO OTHER RIGHTS THAT Commodity Stream, LLC CLEARING MAY HAVE UNDER
 APPLICABLE LAW AND GOVERNMENTAL REGULATIONS, OTHER PROVISIONS OF THE RULES,
 ADDITIONAL AGREEMENTS WITH THE CLEARING PARTICIPANT OR ANY OTHER SOURCE.
 
-# 502\. Clearing Participant Default.
+## 502\. Clearing Participant Default.
 
-    (A). If a Clearing Participant is in Default, Margin held with respect to such Clearing Participant’s Member Property Accounts, and any other of such Clearing Participant’s assets held by, pledged to or otherwise available to Commodity Stream, LLC, may be applied by Commodity Stream, LLC to discharge the Obligations of such Clearing Participant to Commodity Stream, LLC (including any costs and expenses associated with the liquidation, transfer or management of Contracts held in or for the Member Property Accounts of such Clearing Participant, and any fees, assessments  or fines imposed by Commodity Stream, LLC on such Clearing Participant), and Commodity Stream, LLC may cause all Contracts of such Clearing Participant (whether or not carried in a Customer Account) to be closed or offset, transferred to any other Clearing Participant, or otherwise resolved as provided in these Rules.
+(A). If a Clearing Participant is in Default, Margin held with respect to such Clearing
+Participant’s Member Property Accounts, and any other of such Clearing Participant’s assets held
+by, pledged to or otherwise available to Commodity Stream, LLC, may be applied by Commodity Stream,
+LLC to discharge the Obligations of such Clearing Participant to Commodity Stream, LLC (including
+any costs and expenses associated with the liquidation, transfer or management of Contracts held in
+or for the Member Property Accounts of such Clearing Participant, and any fees, assessments  or
+fines imposed by Commodity Stream, LLC on such Clearing Participant), and Commodity Stream, LLC may
+cause all Contracts of such Clearing Participant (whether or not carried in a Customer Account) to
+be closed or offset, transferred to any other Clearing Participant, or otherwise resolved as
+provided in these Rules.
 
-    (B). If the Margin held with respect to such Clearing Participant’s Member Property Accounts, and other of such Clearing Participant’s assets held by, pledged to or otherwise available to Commodity Stream, LLC, including any guarantee issued pursuant to these Rules, are insufficient to satisfy the defaulting Clearing Participant’s Obligations to Commodity Stream, LLC after giving effect to the application of such amounts pursuant to paragraph (a), such defaulting Clearing Participant shall continue to be liable therefor.
+(B). If the Margin held with respect to such Clearing Participant’s Member Property Accounts,
+and other of such Clearing Participant’s assets held by, pledged to or otherwise available to
+Commodity Stream, LLC, including any guarantee issued pursuant to these Rules, are insufficient to
+satisfy the defaulting Clearing Participant’s Obligations to Commodity Stream, LLC after giving
+effect to the application of such amounts pursuant to paragraph (a), such defaulting Clearing
+Participant shall continue to be liable therefor.
 
-    (C). In closing, offsetting, transferring or otherwise resolving the Contracts of a Clearing Participant as provided herein and in Rule 601, Commodity Stream, LLC shall have the right:
-        (i) With respect to Contracts in a Customer Account of such Commodity Stream, LLC Clearing Participant, to set off [x] any proceeds received by Commodity Stream, LLC from the disposition of such Contracts and any property or proceeds thereof deposited with or held by Commodity Stream, LLC as Margin for such account against [y] any amounts paid by Commodity Stream, LLC in the disposition of such Contracts,
+(C). In closing, offsetting, transferring or otherwise resolving the Contracts of a Clearing
+Participant as provided herein and in Rule 601, Commodity Stream, LLC shall have the right:
 
-        including any commissions or other losses or expenses incurred in connection therewith or in connection with the liquidation of Margin deposits in such Customer Account and any other amounts owed to Commodity Stream, LLC as a result of transactions in the Customer Account or otherwise lawfully chargeable against such Customer Account;
+    (i) With respect to Contracts in a Customer Account of such Commodity Stream, LLC Clearing
+    Participant, to set off [x] any proceeds received by Commodity Stream, LLC from the disposition of
+    such Contracts and any property or proceeds thereof deposited with or held by Commodity Stream, LLC
+    as Margin for such account against [y] any amounts paid by Commodity Stream, LLC in the disposition
+    of such Contracts,
 
-        (ii) With respect to the Contracts in any Member Property Accounts of such Clearing Participant, to set off (x) any proceeds received by Commodity Stream, LLC from the disposition of such Contracts, any property or proceeds thereof deposited with or held by Commodity Stream, LLC as Margin for such Member Property Accounts and any other property of the Clearing Participant within the possession or control of Commodity Stream, LLC other than property that has been identified by such Clearing Participant as required to be segregated pursuant to the CEA and CFTC Regulations, against (y) any amounts paid by Commodity Stream, LLC in the disposition of such Contracts, including any commissions or other losses or expenses incurred in connection therewith or in connection with the liquidation of Margin deposits in such Member Property Accounts, and any other Obligations of the Clearing Participant to Commodity Stream, LLC, including Obligations of the Clearing Participant to Commodity Stream, LLC remaining after the setoffs referred to in paragraph (i) above, and any Obligations arising from any other Member Property Accounts maintained by the Clearing Participant with Commodity Stream, LLC; and
+    including any commissions or other losses or expenses incurred in connection therewith or
+    in connection with the liquidation of Margin deposits in such Customer Account and any other
+    amounts owed to Commodity Stream, LLC as a result of transactions in the Customer Account or
+    otherwise lawfully chargeable against such Customer Account;
 
-        (iii) To defer closing or otherwise settling such trades and Contracts if, in its discretion, it determines that the closing out of some or all of the suspended Clearing Participant’s trades or Contracts would not be in the best interests of Commodity Stream, LLC or other Clearing Participants, taking into account the size and nature of the positions in question, market conditions prevailing at the time, the potential market effects of such liquidating transactions as might be directed by Commodity Stream, LLC, and such other circumstances as it deems relevant;
+    (ii) With respect to the Contracts in any Member Property Accounts of such Clearing
+    Participant, to set off (x) any proceeds received by Commodity Stream, LLC from the disposition of
+    such Contracts, any property or proceeds thereof deposited with or held by Commodity Stream, LLC as
+    Margin for such Member Property Accounts and any other property of the Clearing Participant within
+    the possession or control of Commodity Stream, LLC other than property that has been identified by
+    such Clearing Participant as required to be segregated pursuant to the CEA and CFTC Regulations,
+    against (y) any amounts paid by Commodity Stream, LLC in the disposition of such Contracts,
+    including any commissions or other losses or expenses incurred in connection therewith or in
+    connection with the liquidation of Margin deposits in such Member Property Accounts, and any other
+    Obligations of the Clearing Participant to Commodity Stream, LLC, including Obligations of the
+    Clearing Participant to Commodity Stream, LLC remaining after the setoffs referred to in paragraph
+    (i) above, and any Obligations arising from any other Member Property Accounts maintained by the
+    Clearing Participant with Commodity Stream, LLC; and
 
-        (iv) Or take any action the Clearinghouse deems proper or in the best interest of the Clearinghouse or its Clearing Participants.
+    (iii) To defer closing or otherwise settling such trades and Contracts if, in its
+    discretion, it determines that the closing out of some or all of the suspended Clearing
+    Participant’s trades or Contracts would not be in the best interests of Commodity Stream, LLC or
+    other Clearing Participants, taking into account the size and nature of the positions in question,
+    market conditions prevailing at the time, the potential market effects of such liquidating
+    transactions as might be directed by Commodity Stream, LLC, and such other circumstances as it
+    deems relevant;
 
-    (D). For purposes of this Rule, each Default by a Network and/or Clearing Participant will be considered a separate Default.
+        (iv) Or take any action the Clearinghouse deems proper or in the best interest of the
+    Clearinghouse or its Clearing Participants.
 
-    (E). A Network and/or Clearing Participant shall take no action, including but not limited to attempting to obtain a court order, that would interfere with the ability of Commodity Stream, LLC to exercise its rights under the Rules and its agreements with such Network or Clearing Participant.
+(D). For purposes of this Rule, each Default by a Network and/or Clearing Participant will be
+considered a separate Default.
+
+(E). A Network and/or Clearing Participant shall take no action, including but not limited to
+attempting to obtain a court order, that would interfere with the ability of Commodity Stream, LLC
+to exercise its rights under the Rules and its agreements with such Network or Clearing
+Participant.
 
 ## 503. Investment of Customer Funds
 
