@@ -1,14 +1,10 @@
 ---
-sort: 8
+sort: 7
 ---
-
-<!-- Attribution-NonCommercial-NoDerivs 2.5
-   - https://spdx.org/licenses/CC-BY-NC-ND-2.5.html
-   - (C) 2021 Commodity Stream, LLC Corporation -->
 
 # Suspension and Disciplinary Proceedings
 
-## **General**
+## Overview
 
 (A). The Board, Risk Management Committee, or any Exchange Committee may
 summarily suspend any Clearing Participant
