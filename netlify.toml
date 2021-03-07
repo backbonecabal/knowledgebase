@@ -1,5 +1,8 @@
 [build]
   base = "."
+  publish = "_site/"
+  command = "bundle exec install && bundle exec jekyll build"
+#  functions = "project/functions/" // TODO: LAMBDA FUNCTIONS
 
   [build.processing]
     skip_processing = false
@@ -13,7 +16,7 @@
     pretty_urls = true
   [build.processing.images]
     compress = true
-    
+      
  [headers]
 # Define which paths this specific [[headers]] block will cover.
   for = "/*"
