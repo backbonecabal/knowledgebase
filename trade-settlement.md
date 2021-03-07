@@ -1,12 +1,10 @@
 ---
-sort: 7
+sort: 6
 ---
 
-<!-- Attribution-NonCommercial-NoDerivs 2.5
-   - https://spdx.org/licenses/CC-BY-NC-ND-2.5.html
-   - (C) 2020 Commodity Stream, LLC Corporation -->
+# Trade and Settlement
 
-# Submission of Trades.
+## 401. Submission of Trades.
 
 (A). Upon matching of a trade effected on or pursuant to the rules of the
 Exchange, the Exchange shall promptly submit to Commodity Stream, LLC a trade
