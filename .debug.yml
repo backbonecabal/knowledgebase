@@ -1,0 +1,9 @@
+
+remote_theme: false
+
+debug:
+  compress: false
+  dist: true
+  shortcodes: true
+
+theme: jekyll-rtd-theme
