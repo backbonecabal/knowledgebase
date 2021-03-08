@@ -9,7 +9,3 @@ gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-sitemap'
 
 gem 'jekyll-feed'
-
-group :jekyll_plugins do
-  gem 'jekyll-commonmark'
-end
