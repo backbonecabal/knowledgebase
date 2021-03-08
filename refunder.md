@@ -55,7 +55,7 @@ function refund(address sender, address target, bytes4 interfaceId, uint256 amou
 function withdraw(uint256 amount)
 ```
 
-#### Context 
+#### Context
 
 ```solidity
 abstract contract Context {
@@ -75,7 +75,6 @@ abstract contract Context {
 The GatewayProxy contract is a singleton contract used to forward the provided contract call data (e.g raw msg + signature) to the target contract and request a refund for the `msg.sender` afterwards from the responsible `Refunder` contract.
 
 > Note v1 should implement the factory/registry pattern
-
 
 The contract has a `map(address, bool)` of the deployed `refunder` contracts. Anyone is able to add addresses to the `map` if they support the required `Refunder` interface.
 
@@ -100,7 +99,7 @@ function addRefunder(address refunder)
 ```Solidity
 modifier netGasCost(targetContract, interfaceId) {
     uint256 gasProvided = gasLeft();
-    uint256 refundCost = refunder.getRefundCost(targetContract, interfaceId, tx.gasprice) // FIXME - non-reentrance 
+    uint256 refundCost = refunder.getRefundCost(targetContract, interfaceId, tx.gasprice) // FIXME - non-reentrance
 
     _;
 
