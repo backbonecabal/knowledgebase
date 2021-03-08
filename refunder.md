@@ -7,7 +7,7 @@ sort: 4
 A generic contract system for reliably refunding the gas costs of transactions. The purpose of the project is to:
 
 - Enable Protocols to specify what contract calls they are willing to sponsor with a set of limitations (e.g gas price)
-- Enable anyone to sumbit transactions that are eligible for refunding and get their transaction costs reimbursed.
+- Enable anyone to submit transactions that are eligible for refunding and get their transaction costs reimbursed.
 
 ## Contracts
 
@@ -39,36 +39,55 @@ The contract:
 #### Interface
 
 Note:
-Function calls must be `NonReentrant`
+Function calls must be `nonReentrant`
 
 ```Solidity
-// Returns true/false whether the specified contract call is eligible for gas refund
+// @param isEligible - Returns true/false whether the specified contract call is eligible for gas refund
 function isEligible(address targetContract, bytes4 interfaceId, uint256 gasPrice) external returns (bool)
 
-// Returns the `expected` gas costs for executing the `refund` with the specified arguments
+// @param getRefundCost -  Returns the `expected` gas costs for executing the `refund` with the specified arguments
 function getRefundCost(address targetContract, bytes4 interfaceId, uint256 gasPrice) external returns (uint256)
 
-// Refunds the sender, calling the target contract's function
+// @param refund - Refunds the sender, calling the target contract's function
 function refund(address sender, address target, bytes4 interfaceId, uint256 amount) external returns (bool)
 
-// Withdraws ETH from the Refunder contract
+// @param  withdraw  - Withdraws ETH from the Refunder contract
 function withdraw(uint256 amount)
+```
+
+#### Context 
+
+```solidity
+abstract contract Context {
+    function _msgSender() internal view virtual returns (address) {
+        return msg.sender;
+    }
+
+    function _msgData() internal view virtual returns (bytes calldata) {
+        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691
+        return msg.data;
+    }
+}
 ```
 
 ### GatewayProxy
 
 The GatewayProxy contract is a singleton contract used to forward the provided contract call data (e.g raw msg + signature) to the target contract and request a refund for the `msg.sender` afterwards from the responsible `Refunder` contract.
 
-// TODO use factory/registry pattern
+> Note v1 should implement the factory/registry pattern
+
+
 The contract has a `map(address, bool)` of the deployed `refunder` contracts. Anyone is able to add addresses to the `map` if they support the required `Refunder` interface.
 
 #### Interface:
 
+> Note v1 should implement the factory/registry pattern
+
 ```Solidity
-// Provides the `refunder` of the call, the target contrat and the call data to be passed. Refunder reimburses the gas costs of the msg sender
+// Provides the `refunder` of the call, the target contract and the call data to be passed. Refunder reimburses the gas costs of the msg sender
 function supplyAndRefund(address refunder, address target, bytes data)
 
-// TODO use factory/registry pattern
+
 // Adds new refunder in the `refunders` map. Internally this function calls the `refunder.refundGasCost` function to set the appropriate value in the `refunders` map
 function addRefunder(address refunder)
 
@@ -80,12 +99,12 @@ function addRefunder(address refunder)
 
 ```Solidity
 modifier netGasCost(targetContract, interfaceId) {
-    uint256 gasProvided = gasleft();
-    uint256 refundCost = refunder.getRefundCost(targetContract, interfaceId, tx.gasprice) // TODO think about nonReetrant solution
+    uint256 gasProvided = gasLeft();
+    uint256 refundCost = refunder.getRefundCost(targetContract, interfaceId, tx.gasprice) // FIXME - non-reentrance 
 
     _;
 
-    uint256 gasUsedSoFar = gasProvided - gasleft();
+    uint256 gasUsedSoFar = gasProvided - gasLeft();
     refundAmount = (gasUsedSoFar + refundCost) * tx.gasprice;
     refunder.refund(msg.sender, targetContract, interfaceId, refundAmount);
 }
@@ -99,6 +118,6 @@ NOTE: `interfaceId` is the first 4 bytes of the provided `bytes data`
 
 ```Solidity
 
-(bool success, bytes memory returnData) = target.call(data) // forwarding value as-well
+(bool success, bytes memory returnData) = target.call(data) // @dev forwarding value
 
 ```
