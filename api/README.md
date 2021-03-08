@@ -1,6 +1,12 @@
-# Documentation for Order Book API
+---
+sort: 4
+---
 
-<a name="documentation-for-api-endpoints"></a>
+# SushiSwap User API
+
+> Documentation for Order Book API
+
+source: `{{ page.path }}`
 
 ## Documentation for API Endpoints
 
@@ -16,9 +22,8 @@ All URIs are relative to *https://sushi.backbonecabal.xyz*
 | _DefaultApi_ | [**apiV1TokensSellTokenFeeGet**](Apis/DefaultApi.md#apiv1tokensselltokenfeeget) | **GET** /api/v1/tokens/{sellToken}/fee | The fee that is charged for placing an order. The fee is described by a minimum fee - in order to cover the gas costs for onchain settling - and a feeRatio charged to the users for using the service. |
 | _DefaultApi_ | [**apiV1TradesGet**](Apis/DefaultApi.md#apiv1tradesget)                         | **GET** /api/v1/trades                 | Get existing Trades.                                                                                                                                                                                    |
 
-<a name="documentation-for-models"></a>
 
-## Documentation for Models
+### Documentation for Models
 
 - [FeeInformation](.//Models/FeeInformation.md)
 - [Order](.//Models/Order.md)
@@ -30,8 +35,9 @@ All URIs are relative to *https://sushi.backbonecabal.xyz*
 - [OrderType](.//Models/OrderType.md)
 - [Trade](.//Models/Trade.md)
 
-<a name="documentation-for-authorization"></a>
 
-## Documentation for Authorization
+### Documentation for Authorization
 
 All endpoints do not require authorization.
+
+{% include list.liquid all=true %}
