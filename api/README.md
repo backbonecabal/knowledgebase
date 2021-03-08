@@ -6,7 +6,7 @@ sort: 3
 
 > Documentation for Order Book API
 
-source: `{{ page.path }}`
+{% include list.liquid all=true %}
 
 ## Documentation for API Endpoints
 
@@ -40,4 +40,4 @@ All URIs are relative to *https://sushi.backbonecabal.xyz*
 
 All endpoints do not require authorization.
 
-{% include list.liquid all=true %}
+source: `{{ page.path }}`

@@ -1,4 +1,6 @@
-# DefaultApi
+# API Overview
+
+{% include list.liquid all=true %}
 
 All URIs are relative to *https://sushi.backbonecabal.xyz*
 
