@@ -23,8 +23,8 @@ Factory contract used for the deployment of `Refunder` contracts. Anyone is able
 
 - `RefunderFactory` is aware of the `GateWayProxy` and its interface.
 - On deployment:
-    - `msg.sender` is the initial owner of the `Refunder` contract.
-    - the deployed `Refunder` contract is added to the set of registered `refunders` in the `GatewayProxy` via the `GatewayProxy.addRefunder` function.
+  - `msg.sender` is the initial owner of the `Refunder` contract.
+  - the deployed `Refunder` contract is added to the set of registered `refunders` in the `GatewayProxy` via the `GatewayProxy.addRefunder` function.
 
 ### Refunder
 
