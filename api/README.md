@@ -22,7 +22,6 @@ All URIs are relative to *https://sushi.backbonecabal.xyz*
 | _DefaultApi_ | [**apiV1TokensSellTokenFeeGet**](Apis/DefaultApi.md#apiv1tokensselltokenfeeget) | **GET** /api/v1/tokens/{sellToken}/fee | The fee that is charged for placing an order. The fee is described by a minimum fee - in order to cover the gas costs for onchain settling - and a feeRatio charged to the users for using the service. |
 | _DefaultApi_ | [**apiV1TradesGet**](Apis/DefaultApi.md#apiv1tradesget)                         | **GET** /api/v1/trades                 | Get existing Trades.                                                                                                                                                                                    |
 
-
 ### Documentation for Models
 
 - [FeeInformation](.//Models/FeeInformation.md)
@@ -34,7 +33,6 @@ All URIs are relative to *https://sushi.backbonecabal.xyz*
 - [OrderPostError](.//Models/OrderPostError.md)
 - [OrderType](.//Models/OrderType.md)
 - [Trade](.//Models/Trade.md)
-
 
 ### Documentation for Authorization
 

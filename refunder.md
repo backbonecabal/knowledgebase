@@ -23,8 +23,8 @@ Factory contract used for the deployment of `Refunder` contracts. Anyone is able
 
 - `RefunderFactory` is aware of the `GateWayProxy` and its interface.
 - On deployment:
-  - `msg.sender` is the initial owner of the `Refunder` contract.
-  - the deployed `Refunder` contract is added to the set of registered `refunders` in the `GatewayProxy` via the `GatewayProxy.addRefunder` function.
+    - `msg.sender` is the initial owner of the `Refunder` contract.
+    - the deployed `Refunder` contract is added to the set of registered `refunders` in the `GatewayProxy` via the `GatewayProxy.addRefunder` function.
 
 ### Refunder
 
@@ -78,7 +78,7 @@ The GatewayProxy contract is a singleton contract used to forward the provided c
 
 The contract has a `map(address, bool)` of the deployed `refunder` contracts. Anyone is able to add addresses to the `map` if they support the required `Refunder` interface.
 
-#### Interface:
+#### Interface
 
 > Note v1 should implement the factory/registry pattern
 
