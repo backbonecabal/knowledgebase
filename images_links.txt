@@ -1,0 +1,8 @@
+https://rawcdn.githack.com/backbonecabal/knowledgebase/a305e6289ab91bb69678876859032a03cdd23060/images/normal_tx_flow.png
+https://rawcdn.githack.com/backbonecabal/knowledgebase/a305e6289ab91bb69678876859032a03cdd23060/images/normal_grp.svg
+
+<before>
+https://rawcdn.githack.com/backbonecabal/knowledgebase/a305e6289ab91bb69678876859032a03cdd23060/images/normal_tx_flow.png
+
+<after>
+https://rawcdn.githack.com/backbonecabal/knowledgebase/a305e6289ab91bb69678876859032a03cdd23060/images/backbone_tx_flow.png
