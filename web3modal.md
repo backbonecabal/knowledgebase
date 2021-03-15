@@ -22,7 +22,7 @@ const providerOptions = {
   backbone: {
     package: BackboneCabal, // required
     options: {
-      infuraId: "BACKBONE_ID" // required
+      backboneId: "BACKBONE_ID" // required
     }
   }
 };
