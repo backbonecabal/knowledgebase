@@ -1,0 +1,36 @@
+{
+  "name": "backbone-cabal-kb",
+  "version": "1.4.0",
+  "description": "Backbone Cabal Knowledgebase",
+  "main": "index.js",
+  "files": [
+    "docs"
+  ],
+  "scripts": {
+    "report": "lighthouse http://127.0.0.1:4000",
+    "lint": "npx prettier --write .",
+    "lint:md": "npx prettier --config .prettierrc.js --write '**/*.md'",
+    "lint:fix": "sh ./lint-fix.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backbonecabal/knowledgebase.git"
+  },
+  "keywords": [],
+  "author": "SEE CONTRIBUTORS",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/backbonecabal/knowledgebase/issues"
+  },
+  "homepage": "https://github.com/backbonecabal/knowledgebase#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "lighthouse": "^7.2.0",
+    "markdownlint": "^0.23.1",
+    "markdownlint-cli": "^0.27.1",
+    "netlify-cli": "^3.10.6",
+    "semantic-release": "^17.4.1"
+  }
+}

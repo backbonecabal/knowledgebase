@@ -1,0 +1,457 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: Order Book API
+  contact: {}
+paths:
+  /api/v1/orders:
+    post:
+      summary: Create a new order.
+      responses:
+        '201':
+          description: Order has been accepted.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UID'
+        '400':
+          description: Error during order validation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderPostError'
+        '403':
+          description: 'Forbidden, your account is deny-listed'
+        '429':
+          description: Too many order placements
+        '500':
+          description: Error adding an order
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderCreation'
+        description: The order to create.
+        required: true
+      tags:
+        - sushiswap
+        - rpc
+      parameters:
+        - name: eth_sendRawTransaction
+          in: query
+          required: true
+          schema:
+            id: '1'
+            params: {}
+            type: string
+      description: eth_sendRawTransaction
+    get:
+      summary: Get existing orders.
+      description: >
+        By default all currently valid orders are returned. The set of returned
+        orders can be
+
+        reduced by setting owner, sell token, buy token filters. It can be
+        increased by disabling
+
+        different order validity exclusion criteria.
+      parameters:
+        - name: owner
+          in: query
+          required: false
+          description: Ethereum 40 byte address encoded as a hex with `0x` prefix.
+          schema:
+            type: string
+        - name: sellToken
+          in: query
+          required: false
+          description: Ethereum 40 byte address encoded as a hex with `0x` prefix.
+          schema:
+            type: string
+        - name: buyToken
+          in: query
+          required: false
+          description: Ethereum 40 byte address encoded as a hex with `0x` prefix.
+          schema:
+            type: string
+        - name: includeFullyExecuted
+          in: query
+          description: Should fully executed orders be returned?
+          schema:
+            type: boolean
+            default: false
+        - name: includeInvalidated
+          in: query
+          description: >-
+            Should orders that have been invalidated in the smart contract be
+            returned?
+          schema:
+            type: boolean
+            default: false
+        - name: includeInsufficientBalance
+          in: query
+          description: >-
+            Should fill or kill orders that are not sufficiently funded be
+            included?
+          schema:
+            type: boolean
+            default: false
+        - name: minValidTo
+          in: query
+          description: |
+            Minimum valid_to timestamp for included orders.
+            The default is the current time.
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: existing orders
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+      tags:
+        - sushiswap
+      callbacks: {}
+  '/api/v1/orders/{UID}':
+    get:
+      summary: Get existing order from UID.
+      parameters:
+        - in: path
+          name: UID
+          required: true
+          description: >
+            Unique identifier for the order: 56 bytes encoded as hex with `0x`
+            prefix.
+
+            Bytes 0 to 32 are the order digest, bytes 30 to 52 the owner address
+
+            and bytes 52..56 valid to,
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Order
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+        '404':
+          description: Order was not found
+      tags:
+        - sushiswap
+      description: UIDv4
+    delete:
+      summary: Cancels order by marking it invalid with a timestamp.
+      description: >
+        The successful deletion might not prevent solvers from settling the
+        order
+
+        Authentication must be provided by signing the following message:
+      parameters:
+        - in: path
+          name: UID
+          required: true
+          description: >
+            Unique identifier for the order: 56 bytes encoded as hex with `0x`
+            prefix.
+
+            Bytes 0 to 32 are the order digest, bytes 30 to 52 the owner address
+
+            and bytes 52..56 valid to,
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderCancellation'
+        description: Signed OrderCancellation
+        required: true
+      responses:
+        '200':
+          description: Order deleted
+        '401':
+          description: Invalid signature
+        '404':
+          description: Order was not found
+      tags:
+        - sushiswap
+  '/api/v1/tokens/{sellToken}/fee':
+    get:
+      description: >
+        The fee that is charged for placing an order.
+
+        The fee is described by a minimum fee - in order to cover the gas costs
+        for onchain settling - and
+
+        a feeRatio charged to the users for using the service.
+      parameters:
+        - name: sellToken
+          in: path
+          required: true
+          description: Ethereum 40 byte address encoded as a hex with `0x` prefix.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: the fee
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeeInformation'
+        '404':
+          description: sellToken not existent
+      tags:
+        - sushiswap
+      summary: Token Fees
+  /api/v1/trades:
+    get:
+      summary: Get existing Trades.
+      description: |
+        By default all trades are returned.
+        Queries can be refined by specifiying owner or order_uid.
+      parameters:
+        - name: owner
+          in: query
+          required: false
+          description: Ethereum 40 byte address encoded as a hex with `0x` prefix.
+          schema:
+            type: string
+        - name: orderUid
+          in: query
+          required: false
+          description: >
+            Unique identifier for the order: 56 bytes encoded as hex with `0x`
+            prefix.
+
+            Bytes 0 to 32 are the order digest, bytes 30 to 52 the owner address
+
+            and bytes 52..56 valid to,
+          schema:
+            type: string
+      responses:
+        '200':
+          description: all trades
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trade'
+      tags:
+        - sushiswap
+  /api/v1/solvable_orders:
+    get:
+      summary: Get solvable orders.
+      description: >
+        The set of orders that solvers should be solving right now. These orders
+        are determined to
+
+        be valid at the time of the request.
+      responses:
+        '200':
+          description: the orders
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+      tags:
+        - sushiswap
+      parameters: []
+x-components: {}
+servers:
+  - url: 'https://sushi.backbonecabal.xyz/'
+  - url: 'http://sushi.backbonecabal.xyz/'
+components:
+  schemas:
+    Address:
+      description: Ethereum 40 byte address encoded as a hex with `0x` prefix.
+      type: string
+      example: '0x6810e776880c02933d47db1b9fc05908e5386b96'
+    BigUint:
+      description: A big unsigned integer encoded in decimal.
+      type: string
+      example: '1234567890'
+    TokenAmount:
+      description: Amount of a token. uint256 encoded in decimal.
+      type: string
+      example: '1234567890'
+    FeeInformation:
+      description: |
+        Provides the information to calculate the fees.
+      type: object
+      properties:
+        expirationDate:
+          description: |
+            Expiration date of the offered fee. Order service might not accept
+            the fee after this expiration date. Encoded as ISO 8601 UTC.
+          type: string
+          example: '2020-12-03T18:35:18.814523Z'
+        minimalFee:
+          $ref: '#/components/schemas/TokenAmount'
+        feeRatio:
+          description: The fee ratio charged on a sellAmount. Denoted in basis points
+          example: 10
+          type: number
+          format: int32
+    OrderType:
+      description: Is this a buy order or sell order?
+      type: string
+      enum:
+        - buy
+        - sell
+    OrderCreation:
+      description: Data a user provides when creating a new order.
+      type: object
+      properties:
+        sellToken:
+          $ref: '#/components/schemas/Address'
+        buyToken:
+          $ref: '#/components/schemas/Address'
+        sellAmount:
+          $ref: '#/components/schemas/TokenAmount'
+        buyAmount:
+          $ref: '#/components/schemas/TokenAmount'
+        validTo:
+          description: Unix timestamp until the order is valid. uint32.
+          type: integer
+        appData:
+          description: >
+            Arbitrary identifier sent along with the order.
+
+            Could be used to track the interface or other meta-aspects of the
+            order. uint32 encoded
+          type: integer
+        feeAmount:
+          $ref: '#/components/schemas/TokenAmount'
+        kind:
+          $ref: '#/components/schemas/OrderType'
+        partiallyFillable:
+          description: Is this a fill-or-kill order or a partially fillable order?
+          type: boolean
+        Signature:
+          $ref: '#/components/schemas/Signature'
+    OrderMetaData:
+      description: |
+        Extra order data that is returned to users when querying orders
+        but not provided by users when creating orders.
+      type: object
+      properties:
+        creationTime:
+          description: Creation time of the order. Encoded as ISO 8601 UTC.
+          type: string
+          example: '2020-12-03T18:35:18.814523Z'
+        owner:
+          $ref: '#/components/schemas/Address'
+        UID:
+          $ref: '#/components/schemas/UID'
+        availableBalance:
+          $ref: '#/components/schemas/TokenAmount'
+        executedSellAmount:
+          $ref: '#/components/schemas/BigUint'
+        executedSellAmountBeforeFees:
+          $ref: '#/components/schemas/BigUint'
+        executedBuyAmount:
+          $ref: '#/components/schemas/BigUint'
+        executedFeeAmount:
+          $ref: '#/components/schemas/BigUint'
+        invalidated:
+          description: Has this order been invalidated?
+          type: boolean
+    Order:
+      allOf:
+        - $ref: '#/components/schemas/OrderCreation'
+        - $ref: '#/components/schemas/OrderMetaData'
+    OrderCancellation:
+      description: >
+        EIP712 signature of struct OrderCancellation { orderUid: bytes } from
+        the order's owner
+      type: object
+      properties:
+        signature:
+          $ref: '#/components/schemas/Signature'
+    Trade:
+      description: |
+        Trade data such as executed amounts, fees, order id and block number.
+      type: object
+      properties:
+        blockNumber:
+          description: Block in which trade occurred.
+          type: integer
+        logIndex:
+          description: Index in which transaction was included in block.
+          type: integer
+        orderUid:
+          $ref: '#/components/schemas/UID'
+        owner:
+          $ref: '#/components/schemas/Address'
+        sellToken:
+          $ref: '#/components/schemas/Address'
+        buyToken:
+          $ref: '#/components/schemas/Address'
+        sellAmount:
+          $ref: '#/components/schemas/TokenAmount'
+        sellAmountBeforeFees:
+          $ref: '#/components/schemas/BigUint'
+        buyAmount:
+          $ref: '#/components/schemas/TokenAmount'
+    UID:
+      description: >
+        Unique identifier for the order: 56 bytes encoded as hex with `0x`
+        prefix.
+
+        Bytes 0 to 32 are the order digest, bytes 30 to 52 the owner address
+
+        and bytes 52..56 valid to,
+      type: string
+    Signature:
+      description: 65 bytes encoded as hex with `0x` prefix. r + s + v from the spec.
+      example: >-
+        0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    OrderPostError:
+      type: object
+      properties:
+        errorType:
+          type: string
+          enum:
+            - MissingOrderData
+            - InvalidSignature
+            - DuplicateOrder
+            - InsufficientFunds
+        description:
+          type: string
+    OrderCancellationError:
+      type: object
+      properties:
+        errorType:
+          type: string
+          enum:
+            - InvalidSignature
+            - InvalidOrderUid
+        description:
+          type: string
+  links: {}
+  callbacks: {}
+  securitySchemes:
+    project_id:
+      type: apiKey
+      name: api_key
+      in: header
+    project_credentials:
+      type: oauth2
+security:
+  - project_id: []
+  - project_credentials: []
+tags:
+  - name: sushiswap
+    description: |
+      SushiSwap Backbone API
+  - name: rpc
+    description: JSON-RPC
