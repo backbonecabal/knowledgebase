@@ -1,29 +1,12 @@
-proposal.md
-2:sort: 1
-
-trade-settlement.md
-2:sort: 6
-
-obligations.md
-2:sort: 8
-
-technical.md
-2:sort: 9
-
-roadmap.md
-2:sort: 10
-
-api/README.md
-2:sort: 3
-
-suspensions.md
-2:sort: 7
-
-directory.md
-2:sort: 5
-
-refunder.md
-2:sort: 4
-
+README.md
 benefits.md
-2:sort: 2
+directory.md
+limit_order_books.md
+obligations.md
+proposal.md
+refunder.md
+roadmap.md
+suspensions.md
+technical.md
+trade-settlement.md
+web3modal.md

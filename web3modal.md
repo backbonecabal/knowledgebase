@@ -35,4 +35,3 @@ const providerOptions = {
 [Backbone Knowledgebase](https://github.com/backbonecabal/knowledgebase)
 
 [support@manifoldfinance.com](mailto:support@manifoldfinance.com)
-

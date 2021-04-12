@@ -29,9 +29,9 @@ by price.
 Consider the following LOB with two price levels:
 
 | Level | Bid Qty | Bid Price | Spread | Offer Price | Offer Qty |
-|-------|---------|-----------|--------|-------------|-----------|
-|     1 |       1 |      9649 |      2 |        9651 |         1 |
-|     2 |       5 |      9648 |      5 |        9653 |         3 |
+| ----- | ------- | --------- | ------ | ----------- | --------- |
+| 1     | 1       | 9649      | 2      | 9651        | 1         |
+| 2     | 5       | 9648      | 5      | 9653        | 3         |
 
 For each given price level:
 
@@ -72,18 +72,18 @@ If this limit order is applied to our earlier example, then it will rest at the 
 because its price is better than the current TOB:
 
 | Level | Bid Qty | Bid Price | Spread | Offer Price | Offer Qty |
-|-------|---------|-----------|--------|-------------|-----------|
-|     1 |   **2** |  **9650** |      1 |        9651 |         1 |
-|     2 |       1 |      9649 |      4 |        9653 |         3 |
-|     3 |       5 |      9648 |        |             |           |
+| ----- | ------- | --------- | ------ | ----------- | --------- |
+| 1     | **2**   | **9650**  | 1      | 9651        | 1         |
+| 2     | 1       | 9649      | 4      | 9653        | 3         |
+| 3     | 5       | 9648      |        |             |           |
 
 Similarly, a limit order to "SELL 3@9653" will "join" the second level on the offer side:
 
 | Level | Bid Qty | Bid Price | Spread | Offer Price | Offer Qty |
-|-------|---------|-----------|--------|-------------|-----------|
-|     1 |       2 |      9650 |      1 |        9651 |         1 |
-|     2 |       1 |      9649 |      4 |        9653 |     **6** |
-|     3 |       5 |      9648 |        |             |           |
+| ----- | ------- | --------- | ------ | ----------- | --------- |
+| 1     | 2       | 9650      | 1      | 9651        | 1         |
+| 2     | 1       | 9649      | 4      | 9653        | **6**     |
+| 3     | 5       | 9648      |        |             |           |
 
 Note that the number of orders at each price level cannot be derived from the aggregate quantity.
 The order count is often shown as a separate "count" field.
@@ -97,11 +97,11 @@ example, then the oldest order will be matched first.
 Consider the effect of a limit order to "BUY 2@9652" that crosses the spread:
 
 | Level | Bid Qty | Bid Price | Spread | Offer Price | Offer Qty |
-|-------|---------|-----------|--------|-------------|-----------|
-|     1 |   **1** |  **9652** |      2 |        9653 |         6 |
-|     2 |       2 |      9650 |        |             |           |
-|     3 |       1 |      9649 |        |             |           |
-|     4 |       5 |      9648 |        |             |           |
+| ----- | ------- | --------- | ------ | ----------- | --------- |
+| 1     | **1**   | **9652**  | 2      | 9653        | 6         |
+| 2     | 2       | 9650      |        |             |           |
+| 3     | 1       | 9649      |        |             |           |
+| 4     | 5       | 9648      |        |             |           |
 
 In this example, the limit order to "BUY 2@9652" crossed with the first level on the offer side
 ("OFFER 1@9651"). The price on the order was higher than the level it crossed, so the resulting
@@ -119,8 +119,8 @@ example, where an aggressive order to "SELL 4@9649" sweeps through the top three
 side:
 
 | Level | Bid Qty | Bid Price | Spread | Offer Price | Offer Qty |
-|-------|---------|-----------|--------|-------------|-----------|
-|     4 |       5 |      9648 |      5 |        9653 |         6 |
+| ----- | ------- | --------- | ------ | ----------- | --------- |
+| 4     | 5       | 9648      | 5      | 9653        | 6         |
 
 This aggressive order will result in the following trades:
 
